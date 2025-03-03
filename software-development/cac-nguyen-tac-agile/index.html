@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agile Methodology</title>
+  <title>The Author's Blog</title>
   <!-- Link tới CSS của Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Link tới CSS tùy chỉnh -->
@@ -16,20 +16,20 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Agile Methodology</a>
+      <a class="navbar-brand" href="#">The Author</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#about">About Agile</a>
+            <a class="nav-link" href="#home">Trang chủ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#benefits">Benefits</a>
+            <a class="nav-link" href="#about">Giới thiệu</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#how-it-works">How It Works</a>
+            <a class="nav-link" href="#posts">Bài viết</a>
           </li>
         </ul>
       </div>
@@ -37,47 +37,53 @@
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero bg-primary text-white text-center py-5">
+  <header id="home" class="hero bg-primary text-white text-center py-5">
     <div class="container">
-      <h1 class="display-4">Welcome to Agile Methodology</h1>
-      <p class="lead">A flexible approach to software development that values collaboration, adaptability, and customer satisfaction.</p>
+      <h1 class="display-4">Chào Mừng đến với Blog của The Author</h1>
+      <p class="lead">Chia sẻ những câu chuyện và bài viết về cuộc sống và sáng tạo.</p>
     </div>
   </header>
 
   <!-- About Section -->
   <section id="about" class="py-5">
     <div class="container">
-      <h2 class="text-center mb-4">What is Agile?</h2>
-      <p>Agile is a set of principles for software development under which requirements and solutions evolve through the collaborative effort of self-organizing and cross-functional teams. Agile promotes flexible, rapid responses to change and the frequent delivery of working software.</p>
+      <h2 class="text-center mb-4">Giới thiệu về The Author</h2>
+      <p>Chúng tôi là một nhóm tác giả với niềm đam mê viết lách và chia sẻ những câu chuyện đầy cảm hứng về cuộc sống, công việc và những sáng tạo đột phá. Mỗi bài viết của chúng tôi mang lại những góc nhìn mới mẻ về thế giới này.</p>
     </div>
   </section>
 
-  <!-- Benefits Section -->
-  <section id="benefits" class="bg-light py-5">
+  <!-- Blog Posts Section -->
+  <section id="posts" class="bg-light py-5">
     <div class="container">
-      <h2 class="text-center mb-4">Benefits of Agile</h2>
+      <h2 class="text-center mb-4">Các Bài Viết Mới Nhất</h2>
       <div class="row">
         <div class="col-md-4">
-          <div class="card shadow">
+          <div class="card">
+            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Post 1">
             <div class="card-body">
-              <h5 class="card-title">Increased Flexibility</h5>
-              <p class="card-text">Agile allows teams to quickly adapt to changes in requirements, technologies, and market conditions.</p>
+              <h5 class="card-title">Bài Viết 1</h5>
+              <p class="card-text">Đây là một bài viết ngắn gọn để giới thiệu nội dung. Đọc thêm để khám phá các ý tưởng và câu chuyện thú vị.</p>
+              <a href="#" class="btn btn-primary">Đọc thêm</a>
             </div>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card shadow">
+          <div class="card">
+            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Post 2">
             <div class="card-body">
-              <h5 class="card-title">Improved Collaboration</h5>
-              <p class="card-text">Frequent communication and collaboration among team members and stakeholders ensure transparency and alignment.</p>
+              <h5 class="card-title">Bài Viết 2</h5>
+              <p class="card-text">Một bài viết khác mang đến cho bạn những thông tin thú vị về thế giới xung quanh. Đừng bỏ lỡ!</p>
+              <a href="#" class="btn btn-primary">Đọc thêm</a>
             </div>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card shadow">
+          <div class="card">
+            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Post 3">
             <div class="card-body">
-              <h5 class="card-title">Faster Delivery</h5>
-              <p class="card-text">With regular iterations and deliveries, Agile allows products to be delivered faster and more efficiently.</p>
+              <h5 class="card-title">Bài Viết 3</h5>
+              <p class="card-text">Khám phá những bài học và câu chuyện đằng sau mỗi sự kiện. Đây sẽ là một bài viết bạn không thể bỏ qua.</p>
+              <a href="#" class="btn btn-primary">Đọc thêm</a>
             </div>
           </div>
         </div>
@@ -85,23 +91,9 @@
     </div>
   </section>
 
-  <!-- How It Works Section -->
-  <section id="how-it-works" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">How Agile Works</h2>
-      <p>Agile follows an iterative process, where work is divided into small cycles called "sprints". Each sprint focuses on a specific set of features or tasks that are completed within a short time frame, usually 1-4 weeks. Here’s how it works:</p>
-      <ul>
-        <li><strong>Planning</strong>: Teams define the scope of the sprint.</li>
-        <li><strong>Development</strong>: Teams start building the software incrementally.</li>
-        <li><strong>Review</strong>: At the end of the sprint, the team presents the work done and collects feedback.</li>
-        <li><strong>Retrospective</strong>: The team reflects on the sprint to improve the next one.</li>
-      </ul>
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer class="bg-dark text-white py-3 text-center">
-    <p>&copy; 2021 Agile Methodology. All Rights Reserved.</p>
+    <p>&copy; 2021 The Author's Blog. All Rights Reserved.</p>
   </footer>
 
   <!-- Link tới JavaScript của Bootstrap -->
