@@ -1,6 +1,31 @@
 <!DOCTYPE html>
-<html>
-  <body>
-    Hello
-  </body>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang Ghi Chú</title>
+  <!-- Kết nối tới Bootstrap CSS -->
+  <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="content-box">
+      <h2>Ghi Chú Của Tôi</h2>
+      <!-- Phần nội dung sẽ được chỉnh sửa và viết vào đây -->
+      <div class="content" contenteditable="true">
+        <!-- Bạn có thể viết nội dung tại đây -->
+        <p>Đây là nơi bạn có thể viết các ghi chú hoặc nội dung của mình.</p>
+        <p>Hãy thử thay đổi hoặc thêm thông tin vào đây để xem kết quả.</p>
+      </div>
+      <!-- Phần này sẽ là nơi bạn viết nội dung -->
+    </div>
+  </div>
+
+  <!-- Kết nối đến Bootstrap JS để có thể sử dụng các component như modal, tooltip... -->
+  <script src="script.js"></script>
+</body>
+
 </html>
