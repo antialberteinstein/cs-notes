@@ -21,7 +21,7 @@ def scan_directory(root_dir):
     return data
 
 # Đường dẫn tới thư mục chứa các ghi chú
-root_dir = './cs-notes'  # Thay thế với đường dẫn tới thư mục chứa các ghi chú của bạn
+root_dir = '/home/runner/work/cs-notes/cs-notes/'  # Thay thế với đường dẫn tới thư mục chứa các ghi chú của bạn
 
 # Quét thư mục và lấy dữ liệu
 notes_data = scan_directory(root_dir)
