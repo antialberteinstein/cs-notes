@@ -31,38 +31,34 @@ body {
   line-height: 1.6;
 }
 
-/* Benefits Section */
-#benefits {
+/* Blog Posts Section */
+#posts {
   background-color: #f8f9fa;
   padding: 60px 0;
 }
 
-#benefits .card {
+#posts .card {
   border: none;
+  margin-bottom: 20px;
 }
 
-#benefits .card-title {
+#posts .card-title {
   font-size: 1.5rem;
 }
 
-#benefits .card-text {
+#posts .card-text {
   font-size: 1rem;
   color: #555;
 }
 
-/* How It Works Section */
-#how-it-works {
-  background-color: #fff;
-  padding: 60px 0;
+#posts .btn {
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
 }
 
-#how-it-works ul {
-  list-style-type: none;
-}
-
-#how-it-works ul li {
-  font-size: 1.1rem;
-  margin: 10px 0;
+#posts .btn:hover {
+  background-color: #0056b3;
 }
 
 /* Footer */
