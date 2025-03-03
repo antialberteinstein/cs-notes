@@ -6,6 +6,8 @@ def scan_directory(root_dir):
     data = {}
     # Lặp qua các thư mục con trong thư mục gốc
     for subdir in os.listdir(root_dir):
+        if subdir.startswith('.'):
+            continue
         full_path = os.path.join(root_dir, subdir)
         if os.path.isdir(full_path):  # Kiểm tra nếu là thư mục
             notes = []
