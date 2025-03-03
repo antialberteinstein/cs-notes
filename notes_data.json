@@ -4,33 +4,5 @@
             "note_name": "quy-trinh-chung",
             "note_url": "software-development/quy-trinh-chung/index.html"
         }
-    ],
-    ".git": [
-        {
-            "note_name": "objects",
-            "note_url": ".git/objects/index.html"
-        },
-        {
-            "note_name": "logs",
-            "note_url": ".git/logs/index.html"
-        },
-        {
-            "note_name": "refs",
-            "note_url": ".git/refs/index.html"
-        },
-        {
-            "note_name": "info",
-            "note_url": ".git/info/index.html"
-        },
-        {
-            "note_name": "hooks",
-            "note_url": ".git/hooks/index.html"
-        }
-    ],
-    ".github": [
-        {
-            "note_name": "workflows",
-            "note_url": ".github/workflows/index.html"
-        }
     ]
 }
