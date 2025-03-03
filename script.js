@@ -1,8 +1,6 @@
 // Mảng ghi chú (có thể thay bằng dữ liệu từ backend hoặc API)
 let notes = [
-  { category: "cs", title: "aa", content: "Đây là nội dung của ghi chú cs/aa." },
-  { category: "cs", title: "bb", content: "Đây là nội dung của ghi chú cs/bb." },
-  { category: "math", title: "integral", content: "Đây là nội dung của ghi chú math/integral." }
+  //
 ];
 
 // Hàm hiển thị danh sách ghi chú
