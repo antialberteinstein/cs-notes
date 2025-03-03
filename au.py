@@ -16,7 +16,7 @@ def scan_directory(root_dir):
                 if os.path.isdir(note_path):
                     notes.append({
                         'note_name': note,
-                        'note_url': f'{subdir}/{note}/index.html'
+                        'note_url': f'{subdir}/{note}'
                     })
             if notes:
                 data[subdir] = notes
