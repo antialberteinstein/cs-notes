@@ -1,7 +1,15 @@
-// Mảng ghi chú (có thể thay bằng dữ liệu từ backend hoặc API)
-let notes = [
-  //
-];
+// Hàm để tải dữ liệu từ file JSON và hiển thị danh sách ghi chú
+function loadNotesData() {
+  fetch('notes_data.json')  // Đảm bảo rằng file JSON này có trong thư mục của bạn
+    .then(response => response.json())
+    .then(data => {
+      notes = data;  // Lưu dữ liệu từ JSON vào mảng notes
+      displayNotes();  // Gọi hàm hiển thị ghi chú sau khi dữ liệu được tải
+    })
+    .catch(error => {
+      console.error('Error loading JSON data:', error);
+    });
+}
 
 // Hàm hiển thị danh sách ghi chú
 function displayNotes() {
@@ -45,5 +53,5 @@ document.getElementById('noteForm').addEventListener('submit', function(event) {
   document.getElementById('noteForm').reset();
 });
 
-// Gọi hàm hiển thị ghi chú khi trang được load
-window.onload = displayNotes;
+// Gọi hàm tải dữ liệu và hiển thị ghi chú khi trang được load
+window.onload = loadNotesData;
