@@ -3,7 +3,7 @@ function loadNotesData() {
   fetch('notes_data.json')  // Đảm bảo rằng file JSON này có trong thư mục của bạn
     .then(response => response.json())
     .then(data => {
-      console.log(data);  // In ra dữ liệu nhận được từ JSON
+      console.log(data);  // In ra dữ liệu nhận được từ JSON để kiểm tra
       displayNotes(data);  // Gọi hàm hiển thị ghi chú sau khi dữ liệu được tải
     })
     .catch(error => {
@@ -20,9 +20,11 @@ function displayNotes(data) {
   for (const category in data) {
     const categoryNotes = data[category];
 
+    // Tạo phần tử div cho mỗi danh mục
     const categoryDiv = document.createElement('div');
     categoryDiv.classList.add('category');
 
+    // Tiêu đề danh mục
     const categoryTitle = document.createElement('h3');
     categoryTitle.innerText = category;
     categoryDiv.appendChild(categoryTitle);
@@ -35,14 +37,14 @@ function displayNotes(data) {
       noteCard.innerHTML = `
         <div class="card note-card">
           <div class="card-body">
-            <h5 class="card-title"><a href="${category}/${note.title}.html">${category}/${note.title}</a></h5>
-            <p class="card-text">${note.content}</p>
+            <h5 class="card-title"><a href="${note.note_url}">${note.note_name}</a></h5>
           </div>
         </div>
       `;
       categoryDiv.appendChild(noteCard);
     });
 
+    // Thêm danh mục vào phần tử chính trên trang
     notesList.appendChild(categoryDiv);
   }
 }
