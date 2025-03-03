@@ -1,0 +1,33 @@
+name: Update list of notes
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:  # Allows manual triggering
+
+permissions: write-all
+
+jobs:
+  simulate:
+    runs-on: ubuntu-latest  # Or another OS like windows-latest or macos-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Run Script
+        run: |
+          python au.py
+
+      - name: Push Repo
+        run: |
+          git config --global user.email "antialberteinstein@gmail.com"
+          git config --global user.name "Github Actions"
+          git add .
+          git commit -m "Update list of notes on the site"
+          git push -u origin
