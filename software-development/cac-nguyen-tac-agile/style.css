@@ -1,92 +1,82 @@
-/* Basic Styles */
-body {
-  font-family: 'Arial', sans-serif;
-  color: #333;
-}
+<!DOCTYPE html>
+<html lang="vi">
 
-/* Hero Section */
-.hero {
-  background-image: url('https://via.placeholder.com/1600x900');
-  background-size: cover;
-  background-position: center;
-  padding: 80px 0;
-}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
 
-.hero h1 {
-  font-size: 3rem;
-}
+      Ghi chú.
+<!--     thêm tiêu đề web ở đây -->
+    
+  </title>
+  <!-- Link tới CSS của Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Link tới CSS tùy chỉnh -->
+  <link rel="stylesheet" href="styles.css">
+</head>
 
-.hero p {
-  font-size: 1.25rem;
-}
+<body>
 
-/* About Section */
-#about {
-  background-color: #fff;
-  padding: 60px 0;
-}
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="https://antialberteinstein.github.io">Nhat Nguyen</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Giới thiệu</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-#about p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
+  <!-- Hero Section -->
+  <header id="home" class="hero bg-primary text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-4">Khoa học máy tính</h1>
+      <p class="lead">Chia sẻ những kiến thức hữu ích về .</p>
+    </div>
+  </header>
 
-/* Blog Posts Section */
-#posts {
-  background-color: #f8f9fa;
-  padding: 60px 0;
-}
+  <!-- About Section -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Giới thiệu về mình</h2>
+      <p>
+        Mình hiện tại là sinh viên năm thứ hai ngành công nghệ thông tin tại Đại học Bách Khoa - Đại học Đà Nẵng.
+        Mình là một người đặc biệt yêu thích Toán học và Khoa học, đặc biệt là Khoa học công nghệ nói chung, Khoa học Máy tính nói riêng.
+        Hiện tại mình đang tham gia vào các dự án nghiên cứu về AI, Neural Networks và xử lý ngôn ngữ tự nhiên (NLP - Natural Language Processing).
+        Trang web được tạo bởi mình để ghi chú cũng như là chia sẽ những kiến thức hữu ích mà mình học tập được từ trên trường học và từ kinh nghiệm thực tiễn.
+        Mình cũng hi vọng những kiến thức trên đây sẽ có thể được truyền đạt một cách tốt nhất đến cho các bạn và giúp các bạn có được những nền tảng thật vững chải
+        để phục vụ cho tương lai sau này. Thân ái.
+      </p>
+    </div>
+  </section>
 
-#posts .card {
-  border: none;
-  margin-bottom: 20px;
-}
+  <div class="content">
 
-#posts .card-title {
-  font-size: 1.5rem;
-}
+    Đây là nội dung bài viết.
+<!--     Viết bài ở đây -->
+  </div>
 
-#posts .card-text {
-  font-size: 1rem;
-  color: #555;
-}
+   <!-- Footer -->
+  <footer class="bg-dark text-white py-3 text-center">
+    <p>&copy; 2025 Nhat Nguyen's Blog. All Rights Reserved.</p>
+  </footer>
 
-#posts .btn {
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
-}
+  <!-- Link tới JavaScript của Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+  <!-- Link tới JavaScript tùy chỉnh -->
+  <script src="script.js"></script>
+</body>
 
-#posts .btn:hover {
-  background-color: #0056b3;
-}
-
-/* Editable Content Section */
-.content-editable {
-  min-height: 200px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-}
-
-.content-editable h3 {
-  font-size: 1.5rem;
-  color: #333;
-}
-
-.content-editable ul {
-  list-style-type: disc;
-  margin-left: 20px;
-}
-
-.content-editable p {
-  font-size: 1.1rem;
-}
-
-/* Footer */
-footer {
-  background-color: #222;
-}
-
-footer p {
-  margin: 0;
-}
+</html>
