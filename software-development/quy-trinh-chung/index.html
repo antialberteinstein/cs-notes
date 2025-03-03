@@ -1,30 +1,57 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trang Ghi Chú</title>
-  <!-- Kết nối tới Bootstrap CSS -->
-  <link href="styles.css" rel="stylesheet">
+  <title>My Cool Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
-  <div class="container">
-    <div class="content-box">
-      <h2>Ghi Chú Của Tôi</h2>
-      <!-- Phần nội dung sẽ được chỉnh sửa và viết vào đây -->
-      <div class="content" contenteditable="true">
-        <!-- Bạn có thể viết nội dung tại đây -->
-        <p>Đây là nơi bạn có thể viết các ghi chú hoặc nội dung của mình.</p>
-        <p>Hãy thử thay đổi hoặc thêm thông tin vào đây để xem kết quả.</p>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>My Cool Blog</h1>
       </div>
-      <!-- Phần này sẽ là nơi bạn viết nội dung -->
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Posts</a></li>
+          <li><a href="#">Categories</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
+  </header>
 
-  <!-- Kết nối đến Bootstrap JS để có thể sử dụng các component như modal, tooltip... -->
+  <main class="main-content container">
+    <div class="blog-post">
+      <div class="post-image">
+        <img src="https://via.placeholder.com/800x500" alt="Blog Image">
+      </div>
+      <div class="post-text">
+        <h2>My First Blog Post</h2>
+        <p>by <span class="author">Your Name</span> on <span class="date">September 10, 2021</span></p>
+        <div class="post-body" contenteditable="true">
+          <!-- Bạn có thể viết ghi chú ở đây bằng HTML -->
+          <p>Start writing your blog post here...</p>
+          <p><strong>For example:</strong></p>
+          <ul>
+            <li>Modern Design Trends</li>
+            <li>How to make your blog pop</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2021 My Cool Blog. All rights reserved.</p>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 
