@@ -2,6 +2,8 @@
 
 Welcome to the **Computer Science Notes** repository, a curated collection of deep-dive notes, resources, and documentation on various topics in Computer Science, including Artificial Intelligence, Programming Languages, and Software Engineering.
 
+**Live Website:** [https://antialberteinstein.github.io/cs-notes](https://antialberteinstein.github.io/cs-notes)
+
 ## 📚 Overview
 
 This project serves as a comprehensive knowledge base, organizing complex technical concepts into accessible, structured notes. It covers a wide range of subjects from modern AI advancements to foundational software development principles.
