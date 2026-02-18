@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Vision | Nhat Nguyen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .content-container {
+            margin-top: 100px;
+            max-width: 800px;
+        }
+        pre {
+            background-color: #1e293b;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            color: #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container content-container">
+        <h1 class="display-4 fw-bold mb-4 text-gradient">Computer Vision Notes</h1>
+        
+        <section class="mb-5">
+            <h2 class="h3 fw-bold text-accent">1. Introduction to Computer Vision</h2>
+            <p>Computer Vision (CV) is a field of artificial intelligence that enables computers and systems to derive meaningful information from digital images, videos, and other visual inputs.</p>
+            <ul>
+                <li><strong>Image Processing:</strong> Manipulation of digital images through algorithms.</li>
+                <li><strong>Object Detection:</strong> Identifying and locating objects in an image.</li>
+                <li><strong>Image Segmentation:</strong> Partitioning an image into multiple segments (sets of pixels).</li>
+            </ul>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="h3 fw-bold text-accent">2. Basic Image Operations with Python (OpenCV)</h2>
+            <pre><code>import cv2
+import matplotlib.pyplot as plt
+
+# Load an image
+img = cv2.imread('image.jpg')
+
+# Convert to RGB (OpenCV uses BGR by default)
+img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+
+# Display
+plt.imshow(img_rgb)
+plt.show()</code></pre>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="h3 fw-bold text-accent">3. Deep Learning for CV</h2>
+            <p>Modern CV relies heavily on Convolutional Neural Networks (CNNs).</p>
+            <h4 class="h6 fw-bold">Common Architectures</h4>
+            <ul>
+                <li><strong>ResNet:</strong> Introduces residual learning to train deeper networks.</li>
+                <li><strong>YOLO (You Only Look Once):</strong> Real-time object detection.</li>
+                <li><strong>U-Net:</strong> Biomedical image segmentation.</li>
+            </ul>
+        </section>
+        
+         <section class="mb-5">
+            <h2 class="h3 fw-bold text-accent">4. Practical Example: Face Detection</h2>
+            <pre><code>import cv2
+
+face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+img = cv2.imread('face.jpg')
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+faces = face_cascade.detectMultiScale(gray, 1.1, 4)
+
+for (x, y, w, h) in faces:
+    cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
+
+cv2.imshow('img', img)
+cv2.waitKey()</code></pre>
+        </section>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../nav_footer.js"></script>
+</body>
+</html>

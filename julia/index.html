@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julia | Nhat Nguyen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .content-container {
+            margin-top: 100px;
+            max-width: 800px;
+        }
+        pre {
+            background-color: #1e293b;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            color: #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container content-container">
+        <h1 class="display-4 fw-bold mb-4 text-gradient">Julia Programming</h1>
+        <p class="lead mb-5 text-secondary-light">
+             High-performance scientific computing and numerical analysis.
+        </p>
+
+        <section class="mb-5">
+            <h2 class="h3 fw-bold text-accent">1. Hello, World!</h2>
+             <pre><code>println("Hello, World!")</code></pre>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="h3 fw-bold text-accent">2. Variables and Basic Types</h2>
+            <pre><code># Basic Types in Julia
+string_var = "Rau ma" # String
+int_var = 36 # Integer
+float_var = 3.6 # Float
+bool_var = true # Boolean
+char_var = 'A' # Character
+
+println(typeof(string_var)) # String
+println(typeof(int_var))    # Int64</code></pre>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="h3 fw-bold text-accent">3. Control Flow</h2>
+            <h4 class="h6 fw-bold">If-Else</h4>
+            <pre><code>if 36 < 92
+    println("36 is less than 92")
+elseif 36 == 92
+    println("36 equals 92")
+else
+    println("36 is greater than 92")
+end</code></pre>
+            
+            <h4 class="h6 fw-bold">Loops</h4>
+             <pre><code># For loop
+for i in 1:10
+    println("Number: $i")
+end
+
+# While loop
+n = 3
+while n > 0
+    println("Countdown: $n")
+    global n = n - 1
+end</code></pre>
+        </section>
+
+         <section class="mb-5">
+            <h2 class="h3 fw-bold text-accent">4. Multiple Dispatch</h2>
+            <p>Julia calls different function implementations based on the types of the arguments.</p>
+            <pre><code>function add(a::Int, b::Int)
+    println("Adding Integers")
+    a + b
+end
+
+function add(a::Float64, b::Float64)
+    println("Adding Floats")
+    a + b + 0.5
+end
+
+add(10, 20)      # Calls Int version
+add(10.0, 20.0)  # Calls Float version</code></pre>
+        </section>
+
+        <section class="mb-5">
+             <h2 class="h3 fw-bold text-accent">5. Data Structures</h2>
+             <h4 class="h6 fw-bold">Arrays</h4>
+             <pre><code>arr = [18, 36, 92]
+push!(arr, 43)
+println(sum(arr))</code></pre>
+             
+              <h4 class="h6 fw-bold">Dictionaries</h4>
+             <pre><code>dict = Dict("name" => "Alice", "age" => 30)
+println(dict["name"])</code></pre>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="h3 fw-bold text-accent">6. Plotting</h2>
+            <pre><code>using Plots
+x = 1:10
+y = rand(10)
+plot(x, y, title="Random Plot")
+savefig("plot.png")</code></pre>
+        </section>
+
+        <div class="alert alert-info mt-5" role="alert">
+            For the complete tutorial, please refer to the course material.
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../nav_footer.js"></script>
+</body>
+</html>

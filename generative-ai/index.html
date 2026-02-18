@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generative AI | Nhat Nguyen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .content-container {
+            margin-top: 100px;
+            max-width: 800px;
+        }
+        pre {
+            background-color: #1e293b;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            color: #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container content-container">
+        <h1 class="display-4 fw-bold mb-4 text-gradient">Generative AI Notes</h1>
+
+        <section class="mb-5">
+            <h2 class="h3 fw-bold text-accent">1. Introduction</h2>
+            <p>Generative AI refers to deep learning models that can generate high-quality text, images, and other content based on the data they were trained on.</p>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="h3 fw-bold text-accent">2. Core Technologies</h2>
+            <ul>
+                <li><strong>GANs (Generative Adversarial Networks):</strong> Two neural networks contest with each other in a game.</li>
+                <li><strong>VAEs (Variational Autoencoders):</strong> Probabilistic generative models based on neural networks.</li>
+                <li><strong>Diffusion Models:</strong> Generate data by reversing a gradual noise addition process (e.g., Stable Diffusion).</li>
+            </ul>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="h3 fw-bold text-accent">3. Example: Stable Diffusion Concept</h2>
+            <p>Stable Diffusion works by:</p>
+            <ol>
+                <li><strong>Forward Diffusion:</strong> Adding noise to an image until it is random noise.</li>
+                <li><strong>Reverse Diffusion:</strong> Learning to remove noise to recover the image.</li>
+                <li><strong>Text Conditioning:</strong> Using CLIP to guide the denoising process based on a text prompt.</li>
+            </ol>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="h3 fw-bold text-accent">4. Tools and Libraries</h2>
+            <ul>
+                <li><strong>Hugging Face Diffusers:</strong> A library for state-of-the-art pretrained diffusion models.</li>
+                <li><strong>Midjourney:</strong> Proprietary generative AI service.</li>
+                <li><strong>DALL-E 3:</strong> OpenAI's image generation model.</li>
+            </ul>
+
+            <pre><code>from diffusers import StableDiffusionPipeline
+import torch
+
+model_id = "runwayml/stable-diffusion-v1-5"
+pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float16)
+pipe = pipe.to("cuda")
+
+prompt = "a photo of an astronaut riding a horse on mars"
+image = pipe(prompt).images[0]  
+image.save("astronaut_rides_horse.png")</code></pre>
+        </section>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../nav_footer.js"></script>
+</body>
+</html>

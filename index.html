@@ -1,78 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trang chủ Ghi chú</title>
-  <!-- Link tới CSS của Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <title>Nhat Nguyen | Computer Science Notes</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
-  
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Nhat Nguyen</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top glass-effect">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-gradient" href="#">Nhat Nguyen</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="#">Trang chủ</a>
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#topics">Topics</a>
+          </li>
+          <li class="nav-item">
+             <a class="nav-link" href="https://github.com/antialberteinstein/cs-notes" target="_blank">GitHub</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Header -->
-  <header class="text-center my-4">
-    <h1>Chào mừng đến với trang ghi chú!</h1>
-    <p>Quản lý các ghi chú chuyên đề Khoa học máy tính nói chung.</p>
-  </header>
-
-  <!-- Danh sách ghi chú -->
-  <div class="container">
-    <div class="row" id="notes-list">
-      <!-- Các ghi chú sẽ được hiển thị tại đây -->
-    </div>
-  </div>
-
-  <!-- Modal để tạo ghi chú mới -->
-  <div class="modal fade" id="createNoteModal" tabindex="-1" aria-labelledby="createNoteModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="createNoteModalLabel">Tạo ghi chú mới</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form id="noteForm">
-            <div class="mb-3">
-              <label for="noteCategory" class="form-label">Danh mục</label>
-              <input type="text" class="form-control" id="noteCategory" placeholder="Nhập danh mục" required>
-            </div>
-            <div class="mb-3">
-              <label for="noteTitle" class="form-label">Tiêu đề</label>
-              <input type="text" class="form-control" id="noteTitle" placeholder="Nhập tiêu đề ghi chú" required>
-            </div>
-            <div class="mb-3">
-              <label for="noteContent" class="form-label">Nội dung</label>
-              <textarea class="form-control" id="noteContent" rows="3" placeholder="Nhập nội dung ghi chú" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Lưu ghi chú</button>
-          </form>
+  <!-- Hero Section -->
+  <header class="hero-section d-flex align-items-center text-center">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h1 class="display-3 fw-bold mb-4">Mastering <span class="text-gradient">Computer Science</span></h1>
+          <p class="lead mb-5 text-secondary-light">
+            A curated collection of deep-dive notes and resources on AI, Programming Languages, and Software Engineering.
+          </p>
+          <a href="#topics" class="btn btn-primary btn-lg px-5 py-3 rounded-pill fw-semibold glow-button">Explore Notes</a>
         </div>
       </div>
     </div>
-  </div>
+    <!-- Background Elements -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+  </header>
 
-<!--   <!-- Nút thêm ghi chú -->
+  <!-- Topics Grid -->
+  <section id="topics" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5 fw-bold section-title">Explore Topics</h2>
+      <div class="row g-4" id="notes-list">
+        <!-- Topic cards will be corrected/injected here or we use static links for the main ones -->
+        
+        <!-- Computer Vision -->
+        <div class="col-md-6 col-lg-4">
+          <a href="computer-vision/" class="card-link">
+            <div class="card topic-card h-100 p-4">
+              <div class="card-body">
+                <div class="icon-wrapper mb-3">
+                  👁️
+                </div>
+                <h3 class="card-title h4 fw-bold mb-3">Computer Vision</h3>
+                <p class="card-text text-muted">Image processing, object detection, and visual recognition systems.</p>
+              </div>
+            </div>
+          </a>
+        </div>
 
+        <!-- Generative AI -->
+        <div class="col-md-6 col-lg-4">
+          <a href="generative-ai/" class="card-link">
+            <div class="card topic-card h-100 p-4">
+              <div class="card-body">
+                <div class="icon-wrapper mb-3">
+                  ✨
+                </div>
+                <h3 class="card-title h4 fw-bold mb-3">Generative AI</h3>
+                <p class="card-text text-muted">Deep learning models for generating content, images, and text.</p>
+              </div>
+            </div>
+          </a>
+        </div>
 
-  <!-- Link tới JS của Bootstrap và jQuery -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- LLMs -->
+        <div class="col-md-6 col-lg-4">
+          <a href="llms/" class="card-link">
+            <div class="card topic-card h-100 p-4">
+              <div class="card-body">
+                <div class="icon-wrapper mb-3">
+                  🤖
+                </div>
+                <h3 class="card-title h4 fw-bold mb-3">LLMs</h3>
+                <p class="card-text text-muted">Large Language Models, architecture, prompting, and fine-tuning.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Python -->
+        <div class="col-md-6 col-lg-4">
+            <a href="python/" class="card-link">
+              <div class="card topic-card h-100 p-4">
+                <div class="card-body">
+                  <div class="icon-wrapper mb-3">
+                    🐍
+                  </div>
+                  <h3 class="card-title h4 fw-bold mb-3">Python</h3>
+                  <p class="card-text text-muted">Advanced Python concepts, data science libraries, and best practices.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+        <!-- Julia -->
+        <div class="col-md-6 col-lg-4">
+            <a href="julia/" class="card-link">
+              <div class="card topic-card h-100 p-4">
+                <div class="card-body">
+                  <div class="icon-wrapper mb-3">
+                    🟣
+                  </div>
+                  <h3 class="card-title h4 fw-bold mb-3">Julia</h3>
+                  <p class="card-text text-muted">High-performance scientific computing and numerical analysis.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Legacy/Other Notes Section -->
+  <section id="other-notes" class="py-5 bg-opacity-10 bg-black">
+    <div class="container">
+      <h2 class="text-center mb-5 fw-bold section-title">Other Notes</h2>
+      <div class="row g-4" id="other-notes-list">
+        <!-- Legacy notes will be injected here by script.js -->
+        <div class="col-12 text-center text-muted">Loading other notes...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 text-center text-muted border-top border-dark mt-5">
+    <div class="container">
+      <p class="mb-0">&copy; 2026 Nhat Nguyen. Built with ❤️ and Code.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
